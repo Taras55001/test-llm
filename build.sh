@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Оновлення системи та встановлення необхідних пакетів
-sudo pacman -Syu --noconfirm
-sudo pacman -S --needed --noconfirm gcc python3 portaudio
-
 # Створити віртуальне оточення
 python3 -m venv venv
 source venv/bin/activate
