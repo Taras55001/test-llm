@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Оновлення системи та встановлення необхідних пакетів
+sudo pacman -Syu --noconfirm
+sudo pacman -S --needed --noconfirm gcc python3 portaudio
+
 # Створити віртуальне оточення
 python3 -m venv venv
 source venv/bin/activate
@@ -11,7 +15,8 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 # Запустити основний скрипт
-python test_micro.py
+python main.py
 
 # Деактивувати віртуальне оточення
 deactivate
+
