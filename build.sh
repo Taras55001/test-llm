@@ -15,7 +15,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 # Запустити основний скрипт
-python main.py
+python test_micro.py
 
 # Деактивувати віртуальне оточення
 deactivate
