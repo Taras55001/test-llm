@@ -1,67 +1,24 @@
-(deck@steamdeck test-llm)$ ./build.sh
-Requirement already satisfied: pip in ./venv/lib/python3.11/site-packages (24.0)
-Requirement already satisfied: SpeechRecognition in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 1)) (3.10.4)
-Requirement already satisfied: pyttsx3 in ./venv/lib/python3.11/site-packages (from -r requirements.txt (line 2)) (2.90)
-Collecting pyaudio (from -r requirements.txt (line 3))
-  Using cached PyAudio-0.2.14.tar.gz (47 kB)
-  Installing build dependencies ... done
-  Getting requirements to build wheel ... done
-  Preparing metadata (pyproject.toml) ... done
-Requirement already satisfied: requests>=2.26.0 in ./venv/lib/python3.11/site-packages (from SpeechRecognition->-r requirements.txt (line 1)) (2.32.3)
-Requirement already satisfied: typing-extensions in ./venv/lib/python3.11/site-packages (from SpeechRecognition->-r requirements.txt (line 1)) (4.12.0)
-Requirement already satisfied: charset-normalizer<4,>=2 in ./venv/lib/python3.11/site-packages (from requests>=2.26.0->SpeechRecognition->-r requirements.txt (line 1)) (3.3.2)
-Requirement already satisfied: idna<4,>=2.5 in ./venv/lib/python3.11/site-packages (from requests>=2.26.0->SpeechRecognition->-r requirements.txt (line 1)) (3.7)
-Requirement already satisfied: urllib3<3,>=1.21.1 in ./venv/lib/python3.11/site-packages (from requests>=2.26.0->SpeechRecognition->-r requirements.txt (line 1)) (2.2.1)
-Requirement already satisfied: certifi>=2017.4.17 in ./venv/lib/python3.11/site-packages (from requests>=2.26.0->SpeechRecognition->-r requirements.txt (line 1)) (2024.2.2)
-Building wheels for collected packages: pyaudio
-  Building wheel for pyaudio (pyproject.toml) ... error
-  error: subprocess-exited-with-error
-  
-  × Building wheel for pyaudio (pyproject.toml) did not run successfully.
-  │ exit code: 1
-  ╰─> [19 lines of output]
-      running bdist_wheel
-      running build
-      running build_py
-      creating build
-      creating build/lib.linux-x86_64-cpython-311
-      creating build/lib.linux-x86_64-cpython-311/pyaudio
-      copying src/pyaudio/__init__.py -> build/lib.linux-x86_64-cpython-311/pyaudio
-      running build_ext
-      building 'pyaudio._portaudio' extension
-      creating build/temp.linux-x86_64-cpython-311
-      creating build/temp.linux-x86_64-cpython-311/src
-      creating build/temp.linux-x86_64-cpython-311/src/pyaudio
-      gcc -DNDEBUG -g -fwrapv -O3 -Wall -march=x86-64 -mtune=generic -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -g -ffile-prefix-map=/build/python/src=/usr/src/debug/python -flto=auto -ffat-lto-objects -march=x86-64 -mtune=generic -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -g -ffile-prefix-map=/build/python/src=/usr/src/debug/python -flto=auto -march=x86-64 -mtune=generic -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -g -ffile-prefix-map=/build/python/src=/usr/src/debug/python -flto=auto -fPIC -I/usr/local/include -I/usr/include -I/home/deck/Downloads/test-llm/venv/include -I/usr/include/python3.11 -c src/pyaudio/device_api.c -o build/temp.linux-x86_64-cpython-311/src/pyaudio/device_api.o
-      У файлі, який включено у src/pyaudio/device_api.c:1:
-      src/pyaudio/device_api.h:7:10: критична помилка: Python.h: Немає такого файла або каталогу
-          7 | #include "Python.h"
-            |          ^~~~~~~~~~
-      компіляцію перервано.
-      error: command '/usr/bin/gcc' failed with exit code 1
-      [end of output]
-  
-  note: This error originates from a subprocess, and is likely not a problem with pip.
-  ERROR: Failed building wheel for pyaudio
-Failed to build pyaudio
-ERROR: Could not build wheels for pyaudio, which is required to install pyproject.toml-based projects
-Traceback (most recent call last):
-  File "/home/deck/Downloads/test-llm/venv/lib/python3.11/site-packages/speech_recognition/__init__.py", line 108, in get_pyaudio
-    import pyaudio
-ModuleNotFoundError: No module named 'pyaudio'
+With hands of steel and mind sharp as a blade,
+A CNC machinist, a skilled and steady shade.
+The digital world, their canvas so clear,
+Where precise movements, a symphony to appear.
 
-During handling of the above exception, another exception occurred:
+Their fingers dance, a symphony of keystrokes,
+As they guide the machine, a master of its courses.
+From G-code to M-code, their knowledge profound,
+To create parts with perfection, a story to be found.
 
-Traceback (most recent call last):
-  File "/home/deck/Downloads/test-llm/test_micro.py", line 47, in <module>
-    recognized_text = recognize_speech_from_microphone()
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/deck/Downloads/test-llm/test_micro.py", line 23, in recognize_speech_from_microphone
-    microphone = sr.Microphone()
-                 ^^^^^^^^^^^^^^^
-  File "/home/deck/Downloads/test-llm/venv/lib/python3.11/site-packages/speech_recognition/__init__.py", line 80, in __init__
-    self.pyaudio_module = self.get_pyaudio()
-                          ^^^^^^^^^^^^^^^^^^
-  File "/home/deck/Downloads/test-llm/venv/lib/python3.11/site-packages/speech_recognition/__init__.py", line 110, in get_pyaudio
-    raise AttributeError("Could not find PyAudio; check installation")
-AttributeError: Could not find PyAudio; check installation
+With steady hands and a steady eye,
+They navigate the path, precise and high.
+Each cut precise, each surface so flat,
+A testament to their skill, a work of art.
+
+In the heart of the factory, they stand tall,
+A master of their craft, answering the call.
+They shape the metal, with unwavering might,
+CNC machinists, the builders of the night.
+
+So next time you see a machined part so fine,
+Remember the hands of the CNC machinist, divine.
+For in their precision, a world is created,
+Where dreams take shape, with unwavering dedication.
