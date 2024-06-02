@@ -1,0 +1,26 @@
+<bos>Write me a poem about CNC Machinist.
+
+With hands of steel and mind sharp as a blade,
+A CNC machinist, a skilled and steady shade.
+The digital world, their canvas so clear,
+Where precise movements, a symphony to appear.
+
+Their fingers dance, a symphony of keystrokes,
+As they guide the machine, a master of its courses.
+From G-code to M-code, their knowledge profound,
+To create parts with perfection, a story to be found.
+
+With steady hands and a steady eye,
+They navigate the path, precise and high.
+Each cut precise, each surface so flat,
+A testament to their skill, a work of art.
+
+In the heart of the factory, they stand tall,
+A master of their craft, answering the call.
+They shape the metal, with unwavering might,
+CNC machinists, the builders of the night.
+
+So next time you see a machined part so fine,
+Remember the hands of the CNC machinist, divine.
+For in their precision, a world is created,
+Where dreams take shape, with unwavering dedication.<eos>
