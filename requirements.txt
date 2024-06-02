@@ -1,3 +1,6 @@
 SpeechRecognition
 pyttsx3
 pyaudio
+accelerate
+transformers[torch]
+torch
