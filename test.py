@@ -1,15 +1,18 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
-tokenizer = AutoTokenizer.from_pretrained("google/gemma-1.1-2b-it")
-model = AutoModelForCausalLM.from_pretrained(
-    "google/gemma-1.1-2b-it",
-    device_map="auto",
-    torch_dtype=torch.bfloat16
-)
+local_model_path = "./gemma-1.1-2b-it"
 
-input_text = "Write me a poem about CNC Machinist."
-input_ids = tokenizer(input_text, return_tensors="pt").to("cuda"if torch.cuda.is_available() else "cpu")
+def llm_request(input_text, max_token):
+    tokenizer = AutoTokenizer.from_pretrained(local_model_path)
+    model = AutoModelForCausalLM.from_pretrained(
+        local_model_path,
+        device_map="auto",
+        torch_dtype=torch.bfloat16
+    )
 
-outputs = model.generate(**input_ids, max_new_tokens=500)
-print(tokenizer.decode(outputs[0]))
+    input_ids = tokenizer(input_text, return_tensors="pt").to("cuda"if torch.cuda.is_available() else "cpu")
+
+    outputs = model.generate(**input_ids, max_new_tokens=max_token)
+    return tokenizer.decode(outputs[0])
+
