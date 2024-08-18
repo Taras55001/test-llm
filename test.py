@@ -3,6 +3,13 @@ import torch
 import os
 import subprocess
 
+import pandas as pd
+
+splits = {'train': 'train/train.csv', 'test': 'test/test.csv'}
+df = pd.read_csv("hf://datasets/nogyxo/question-answering-ukrainian-json-answers/" + splits["train"])
+df.head(10)
+
+
 local_model_path = "./gemma-1.1-2b-it"
 dir_exists = os.path.exists(local_model_path)
 if not dir_exists:
